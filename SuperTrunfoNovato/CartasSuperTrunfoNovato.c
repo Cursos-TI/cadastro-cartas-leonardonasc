@@ -7,20 +7,20 @@
 
 int main()
 {
-  char estadoCarta1, estadoCarta2, codCarta1[3], codCarta2[3], nomeCidade1[20], nomeCidade2[20];
+  char estadoCarta1, estadoCarta2, nomeCidade1[20], nomeCidade2[20];
   float areaCidade1, areaCidade2, pibCidade1, pibCidade2;
-  int pontosTuristicosCidade1, pontosTuristicosCidade2, populacaoCidade1, populacaoCidade2;
+  int codCarta1, codCarta2, pontosTuristicosCidade1, pontosTuristicosCidade2, populacaoCidade1, populacaoCidade2;
 
   // Carta 1
   printf("Digite o estado da primeira carta: ");
   scanf(" %c", &estadoCarta1);
 
   printf("Digite o código da primeira carta: ");
-  scanf("%s", codCarta1);
+  scanf("%d", &codCarta1);
   getchar();
 
   printf("Digite o nome da cidade da primeira carta: ");
-  fgets(nomeCidade1, 20, stdin);
+  fgets(nomeCidade1, sizeof(nomeCidade1), stdin);
 
   // Remover o caractere de nova linha do final da string
   nomeCidade1[strcspn(nomeCidade1, "\n")] = '\0';
@@ -42,7 +42,7 @@ int main()
   scanf(" %c", &estadoCarta2);
 
   printf("Digite o código da segunda carta: ");
-  scanf("%s", codCarta2);
+  scanf("%d", &codCarta2);
   getchar();
 
   printf("Digite o nome da cidade da segunda carta: ");
@@ -67,7 +67,7 @@ int main()
   printf("\nPrimeira Carta:\n");
 
   printf("Estado: %c\n", estadoCarta1);
-  printf("Código: %c%s\n", estadoCarta1, codCarta1);
+  printf("Código: %c%02d\n", estadoCarta1, codCarta1);
   printf("Nome da Cidade: %s\n", nomeCidade1);
   printf("População: %d\n", populacaoCidade1);
   printf("Área: %.2f km²\n", areaCidade1);
@@ -79,7 +79,7 @@ int main()
   printf("\nSegunda Carta:\n");
 
   printf("Estado: %c\n", estadoCarta2);
-  printf("Código: %c%s\n", estadoCarta2, codCarta2);
+  printf("Código: %c%02d\n", estadoCarta2, codCarta2);
   printf("Nome da Cidade: %s\n", nomeCidade2);
   printf("População: %d\n", populacaoCidade2);
   printf("Área: %.2f km²\n", areaCidade2);
