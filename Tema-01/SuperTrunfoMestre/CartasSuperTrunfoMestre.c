@@ -109,8 +109,8 @@ int main()
     printf("PIB: %.2f Bilhões de Reais\n", pibCidade2);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicosCidade2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
-    printf("PIB per Capita: %.2f reais", pibPerCapita2);
-    printf("\nSuper Poder: %.2f\n", superPoder2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+    printf("Super Poder: %.2f\n", superPoder2);
 
     printf("\n-----------------------------\n");
 
